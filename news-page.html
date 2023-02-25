@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+  }
+  .slideshow{
+      min-height: 200px;
+      width: 100%;
+      background: url("/assets/image/nav1.jpg");
+      background-size: cover;
+      animation: slide 24s infinite;
+  }
+  @keyframes slide {
+      25%{background: url("/assets/image/nav2.jpg");
+          background-size: cover}
+      50%{background: url("/assets/image/nav3.jpg");
+          background-size: cover}
+      75%{background: url("/assets/image/nav4.jpg");
+          background-size: cover}
+  }
+  .header-content{
+      position: absolute;
+      top: 2%;
+      color: whitesmoke;
+      align-content: center;
+      padding-left: 350px;
+  }
+  h1{
+      font-weight: bolder;
+      font-size: 8rem;
+      text-align: center;
+  }
+  .parent {
+      width: 100%;
+      min-height: 600px;
+      display: grid;
+      grid-template-columns: 0.4fr repeat(2, 1fr) 0.5fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 7px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+  }
+
+  .div1 { grid-area: 1 / 1 / 3 / 2;
+  background-color: blanchedalmond;
+  }
+  .sidebar{
+      padding: 10px;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 200px;
+  }
+
+  li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+  }
+
+  /* Change the link color on hover */
+  li a:hover {
+      background-color: #555;
+      color: white;
+  }
+  li a.active {
+      background-color: #555555;
+      color: white;
+  }
+  .div2 { grid-area: 1 / 4 / 3 / 5;
+      background-color: #ffffff;
+  }
+  .div3 { grid-area: 1 / 2 / 2 / 4;
+      background-color: #ffffff;
+  }
+  img{
+      max-width: 200px;
+      float: left;
+      margin-right: 10px;
+      border: 3px solid white;
+      border-radius: 10px;
+  }
+  .card1{
+      margin: 10px 10px;
+
+  }
+  .text-box h2{
+      font-size: 20px;
+      font-weight: bold;
+  }
+  .text-box p{
+      font-size: 16px;
+      font-weight: lighter;
+      text-align: justify;
+  }
+  #check{
+      display: none;
+  }
+  #check1{
+      display: none;
+  }
+  #check2{
+      display: none;
+  }
+  .content{
+      display: none;
+  }
+  label{
+      float: right;
+      margin-top: -30px;
+      margin-right: 40px;
+      color: green;
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: 15px;
+  }
+  #check:checked ~.content{
+       display: block;
+  }
+  #check1:checked ~.content{
+      display: block;
+  }
+  #check2:checked ~.content{
+      display: block;
+  }
+  .div4 { grid-area: 2 / 2 / 3 / 3;
+      background-color: #ffffff;
+  }
+  .card2{
+      margin: 10px 10px;
+
+  }
+  .box1 h2{
+      font-size: 20px;
+      font-weight: bold;
+     text-align: center;
+  }
+  .box1 p{
+      font-size: 16px;
+      font-weight: lighter;
+      text-align: justify;
+  }
+  .div5 { grid-area: 2 / 3 / 3 / 4;
+      background-color: #ffffff;
+  }
+  #footer-div{
+      width: 100%;
+      min-height: 50px;
+      background-color: #aaaaaa;
+      text-align: center;
+      line-height: 50px;
+  }
+  #wrapper-div{
+      width: 97%;
+      margin: auto;
+  }
+
+</style>
+</head>
+<body>
+<div id="wrapper-div">
+    <header>
+        <div class="slideshow"></div>
+        <div class="header-content">
+            <h1>BetaTinz</h1>
+            <div class="line"></div>
+            <h4>Country Most Vibrant Newspaper,<br>News at Another Perspective</h4>
+        </div>
+    </header>
+
+    <div class="parent">
+        <div class="div1">
+            <div class="sidebar">
+            <h2><u>TOP NEWS</u></h2>
+            <p>Your Morning Updates</p>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="">Home</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Entertainment</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">Showbiz</a></li>
+                        <li><a href="">Politics</a></li>
+                        <li><a href="">Sport</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar">
+                <h2><u>Check for:</u></h2>
+                <nav>
+                    <ul>
+                        <li><a href="">Job Opportunities</a></li>
+                        <li><a href="">Adverts</a></li>
+                        <li><a href="">Discoveries</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">Showbiz</a></li>
+                        <li><a href="">Fashion & Lifestyle</a></li>
+                        <li><a href="">Puzzles</a></li>
+                        <li><a href="">Quizzes</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="div2">
+            <div class="card">
+                <div class="fakeimg" >
+                    <img src="assets/image/ads2.png" alt="">
+                </div>
+                <p><a href="www.google.com"> Free online schorlaship going on.. got enroled. </a> </p>
+            </div>
+            <br> <br> <br>
+            <div class="card">
+                <div class="fakeimg" style="height:100px;">
+                    <img src="assets/image/ads3.jpg">
+                </div>
+                <p><a href="www.google.com"> Free online schorlaship going on.. got enroled. </a> </p>
+            </div>
+            <br> <br> <br>
+            <div class="card">
+                <div class="fakeimg" style="height:100px;">
+                    <img src="assets/image/ads4.png">
+                </div>
+                <p><a href="www.google.com"> Free online schorlaship going on.. got enroled. </a> </p>
+            </div>
+        </div>
+
+
+        <div class="div3">
+            <div class="card1">
+            <img src="assets/image/image1.jpeg" alt="">
+                <div class="text-box">
+                    <input type="checkbox" id="check">
+            <h2> <u>Government condemns claims by RSF, Le Monde likening Cameroon to monarchy</u></h2>
+            <p>The Cameroon government through Minister of Communication Rene Emmanuel Sadi, has described as excesses, the actions of some media platforms in their treatment and interpretation of Martinez Zogo murder. According to a communique signed by the Minister of Communication, media .....</p>
+                    <div class="content">
+                        <p>According to a communique signed by the Minister of Communication, “media organs such as Reporters Without Borders (RSF) and French newspaper Le Monde, have been engaging in speculative and unfounded dissemination of information in relation to the murder of Martinez Zogo, former journalist of Amplitude FM” an excerpt of the communique read.
+
+                        </p>
+                    </div>
+                    <label for="check">Read More</label>
+                </div>
+            </div>
+
+            <div class="card1">
+                <img src="assets/image/orange.jpg" alt="">
+                <div class="text-box">
+                    <input type="checkbox" id="check1">
+                    <h2> <u>World Cup Playoffs: Indomitable Lionesses to face Portugal in crucial final</u></h2>
+                    <p>The Cameroon women national football team will hope to pick a World Cup spot in the crucial game against Portugal on Wednesday, following a successful opener against Thailand. A brace from Aboudi Onguene at the Waikato Stadium, Saturday February 18....</p>
+                    <div class="content">
+                        <p>According to a communique signed by the Minister of Communication, “media organs such as Reporters Without Borders (RSF) and French newspaper Le Monde, have been engaging in speculative and unfounded dissemination of information in relation to the murder of Martinez Zogo, former journalist of Amplitude FM” an excerpt of the communique read.
+
+                        </p>
+                    </div>
+                    <label for="check1">Read More</label>
+                </div>
+            </div>
+            <div class="card1">
+                <img src="assets/image/image1.jpeg" alt="">
+                <div class="text-box">
+                    <input type="checkbox" id="check">
+                    <h2> <u>Government condemns claims by RSF, Le Monde likening Cameroon to monarchy</u></h2>
+                    <p>The Cameroon government through Minister of Communication Rene Emmanuel Sadi, has described as excesses, the actions of some media platforms in their treatment and interpretation of Martinez Zogo murder. According to a communique signed by the Minister of Communication, media .....</p>
+                    <div class="content">
+                        <p>According to a communique signed by the Minister of Communication, “media organs such as Reporters Without Borders (RSF) and French newspaper Le Monde, have been engaging in speculative and unfounded dissemination of information in relation to the murder of Martinez Zogo, former journalist of Amplitude FM” an excerpt of the communique read.
+
+                        </p>
+                    </div>
+                    <label for="check">Read More</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="div4">
+            <div class="card2">
+                <input type="checkbox" id="check2">
+            <div class="box1">
+                <h2>Girl shares how PAWA saved her from embarrassment!</h2>
+                <p>#BetaPipol the oda day, frustration wan kee some chérie-coco for roadt… e be di go attack some njoka programme, olé for e for reach for the carrefour den discover say e no geh credit for e phone…but e be geh data, so e heart cold… e say make e call e chatteur for Whatsapp, the Sango no dey online…olé stress!</p>
+                <div class="content">
+                    <p> E calculate for take bike, go e bak… den e memba say Orange Cameroon be don gi e PAWA for convert data to credit… na so e go for e My Orange App, go convert e data to credit, den call e chatteur… dey kam take e for carrefour, programme hold in peace and tranquility☺️Man way no get PAWA, na e sabi?</p>
+                 </div>
+                <label for="check2">Read More</label>
+            </div>
+
+                <input type="checkbox" id="check2">
+                <div class="box1">
+                    <h2>Girl shares how PAWA saved her from embarrassment!</h2>
+                    <p>#BetaPipol the oda day, frustration wan kee some chérie-coco for roadt… e be di go attack some njoka programme, olé for e for reach for the carrefour den discover say e no geh credit for e phone…but e be geh data, so e heart cold… e say make e call e chatteur for Whatsapp, the Sango no dey online…olé stress!</p>
+                    <div class="content">
+                        <p> E calculate for take bike, go e bak… den e memba say Orange Cameroon be don gi e PAWA for convert data to credit… na so e go for e My Orange App, go convert e data to credit, den call e chatteur… dey kam take e for carrefour, programme hold in peace and tranquility☺️Man way no get PAWA, na e sabi?</p>
+                    </div>
+                    <label for="check2">Read More</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="div5">
+
+            <div class="card2">
+                <input type="checkbox" id="check2">
+                <div class="box1">
+                    <h2>Girl shares how PAWA saved her from embarrassment!</h2>
+                    <p>#BetaPipol the oda day, frustration wan kee some chérie-coco for roadt… e be di go attack some njoka programme, olé for e for reach for the carrefour den discover say e no geh credit for e phone…but e be geh data, so e heart cold… e say make e call e chatteur for Whatsapp, the Sango no dey online…olé stress!</p>
+                    <div class="content">
+                        <p> E calculate for take bike, go e bak… den e memba say Orange Cameroon be don gi e PAWA for convert data to credit… na so e go for e My Orange App, go convert e data to credit, den call e chatteur… dey kam take e for carrefour, programme hold in peace and tranquility☺️Man way no get PAWA, na e sabi?</p>
+                    </div>
+                    <label for="check2">Read More</label>
+                </div>
+
+                <input type="checkbox" id="check2">
+                <div class="box1">
+                    <h2>Girl shares how PAWA saved her from embarrassment!</h2>
+                    <p>#BetaPipol the oda day, frustration wan kee some chérie-coco for roadt… e be di go attack some njoka programme, olé for e for reach for the carrefour den discover say e no geh credit for e phone…but e be geh data, so e heart cold… e say make e call e chatteur for Whatsapp, the Sango no dey online…olé stress!</p>
+                    <div class="content">
+                        <p> E calculate for take bike, go e bak… den e memba say Orange Cameroon be don gi e PAWA for convert data to credit… na so e go for e My Orange App, go convert e data to credit, den call e chatteur… dey kam take e for carrefour, programme hold in peace and tranquility☺️Man way no get PAWA, na e sabi?</p>
+                    </div>
+                    <label for="check2">Read More</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<div id="footer-div">
+    Footer
+</div>
+</div>
+</body>
+</html>
